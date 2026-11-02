@@ -19,4 +19,4 @@ A full-stack banking application developed using Java Spring Boot and MySQL, fea
 
 ## Application Screenshot
 
-![Banking Management System Dashboard](screenshots/dashboard.png)
+![Banking Management System Dashboard](https://raw.githubusercontent.com/Harsh7Waghela/Banking-Management-System/main/screenshots/dashboard.png)
