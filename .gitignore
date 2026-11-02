@@ -1,0 +1,11 @@
+target/
+.classpath
+.project
+.settings/
+.metadata/
+.factorypath
+*.log
+.DS_Store
+
+# Keep database credentials private
+src/main/resources/application.properties

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Bank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="top">
+      <div class="brand"><i class="ti ti-building-bank"></i><span>My Bank</span></div>
+      <span class="tag">Online banking</span>
+    </div>
+
+    <div class="bank-card">
+      <div class="card-row">
+        <div class="chip"></div>
+        <i class="ti ti-wifi wifi"></i>
+      </div>
+      <div class="label">Current balance</div>
+      <div id="bal" class="balance">₹ 0</div>
+      <div class="card-row">
+        <div><div class="label small">Holder</div><div id="who" class="value">No account</div></div>
+        <div class="right"><div class="label small">Account ID</div><div id="idv" class="value">—</div></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <h4>New account</h4>
+        <input id="nm" type="text" placeholder="Holder name">
+        <input id="ib" type="number" placeholder="Initial balance">
+        <button class="go" onclick="createAccount()"><i class="ti ti-plus"></i>Create account</button>
+      </div>
+
+      <div class="panel">
+        <h4>Manage account</h4>
+        <input id="aid" type="number" placeholder="Account ID">
+        <input id="amt" type="number" placeholder="Amount">
+        <div class="tiles">
+          <button class="t" onclick="deposit()"><i class="ti ti-arrow-down-left"></i>Deposit</button>
+          <button class="t" onclick="withdraw()"><i class="ti ti-arrow-up-right"></i>Withdraw</button>
+          <button class="t" onclick="checkAccount()"><i class="ti ti-search"></i>Check</button>
+          <button class="t" onclick="deleteAccount()"><i class="ti ti-trash"></i>Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="msg" class="msg">Messages show here</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

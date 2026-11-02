@@ -1,0 +1,168 @@
+:root {
+  /* Dark burgundy, espresso and champagne palette from the reference */
+  --latte: #E7D5B8;
+  --cream: #F1E5D2;
+  --burgundy: #762D37;
+
+  --bg: #100D0D;
+  --panel: #1B1414;
+  --panel-soft: #211918;
+  --burgundy-deep: #3B171D;
+  --border: rgba(231, 213, 184, .42);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 36px 20px;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at top, #241719 0%, var(--bg) 62%);
+  color: var(--cream);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.wrap { max-width: 620px; margin: 0 auto; }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--cream);
+}
+.brand i { font-size: 27px; color: var(--latte); }
+.tag { font-size: 13px; color: #CBB99F; }
+
+/* Balance card */
+.bank-card {
+  background:
+    radial-gradient(ellipse at 100% 100%, rgba(120, 48, 57, .42), transparent 48%),
+    linear-gradient(125deg, #873B43 0%, #65252D 48%, #3D171D 100%);
+  border: 1px solid rgba(241, 229, 210, .25);
+  border-radius: 22px;
+  padding: 30px 34px;
+  margin-bottom: 28px;
+  color: var(--cream);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .38), inset 0 1px 0 rgba(255, 239, 218, .08);
+}
+.card-row { display: flex; justify-content: space-between; align-items: center; }
+.chip {
+  width: 44px;
+  height: 32px;
+  border-radius: 7px;
+  background: linear-gradient(145deg, #F2E3C9, #D8C2A0);
+  border: 1px solid rgba(255, 244, 225, .55);
+}
+.wifi { font-size: 24px; color: #F0E1CA; transform: rotate(90deg); }
+.label { font-size: 13px; color: rgba(241, 229, 210, .78); margin: 30px 0 6px; }
+.label.small { font-size: 11px; margin: 0 0 4px; }
+.balance { font-size: 38px; font-weight: 600; margin-bottom: 25px; }
+.value { font-size: 15px; font-weight: 600; color: var(--cream); }
+.right { text-align: right; }
+
+/* Main operation panels */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.panel {
+  background: linear-gradient(145deg, #211818 0%, #171111 100%);
+  border: 1px solid rgba(137, 76, 72, .72);
+  border-radius: 19px;
+  padding: 28px 30px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .34), inset 0 1px 0 rgba(255, 225, 195, .025);
+}
+h4 {
+  margin: 0 0 22px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #EAD9C0;
+  padding-left: 10px;
+  border-left: 3px solid var(--latte);
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  margin-bottom: 16px;
+  background: #171111;
+  border: 1px solid rgba(221, 199, 168, .58);
+  border-radius: 8px;
+  color: var(--cream);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color .18s ease, background .18s ease;
+}
+input:focus {
+  outline: none;
+  border-color: #F0DDBD;
+  background: #211718;
+  box-shadow: 0 0 0 2px rgba(231, 213, 184, .08);
+}
+input::placeholder { color: #B6A18D; opacity: .9; }
+
+button { cursor: pointer; font-family: inherit; transition: .18s ease; }
+.go {
+  width: 100%;
+  height: 49px;
+  background: linear-gradient(100deg, #813640, #702A34);
+  border: 1px solid #87404A;
+  border-radius: 8px;
+  color: #F3E6D3;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.go:hover { background: #91434C; border-color: #A65A61; }
+
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 5px; }
+.t {
+  min-height: 82px;
+  background: linear-gradient(145deg, #211A19, #191312);
+  border: 1px solid rgba(225, 205, 176, .7);
+  border-radius: 13px;
+  color: #F0E2CE;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.t i { font-size: 23px; color: #E6D2B3; }
+.t:hover { background: linear-gradient(135deg, #71303A, #4B2027); border-color: #D7BE9C; }
+.t:hover i { color: #FFF0D9; }
+
+.msg {
+  margin-top: 26px;
+  padding: 16px 18px;
+  border: 1px solid rgba(137, 76, 72, .72);
+  border-radius: 13px;
+  background: linear-gradient(145deg, #211818, #171111);
+  color: #D7C4A8;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  body { padding: 24px 14px; }
+  .bank-card { padding: 25px 22px; }
+  .panel { padding: 23px 20px; }
+  .grid { grid-template-columns: 1fr; gap: 17px; }
+}
