@@ -16,3 +16,7 @@ A full-stack banking application developed using Java Spring Boot and MySQL, fea
 - **Frontend:** HTML, CSS, JavaScript
 - **Database:** MySQL
 - **ORM:** Spring Data JPA, Hibernate
+
+## Application Screenshot
+
+![Banking Management System Dashboard](screenshots/dashboard.png)
